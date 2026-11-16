@@ -1,7 +1,7 @@
 # B45 Labs – Proprietary License Notice
 
 **Last updated:** 2026-11-14
-**Applies to:** B45 Labs | Connect v1.0.0 (Revit 2023, 2024, 2025, 2026, 2027) and all accompanying documentation.
+**Applies to:** B45 Labs | Connect 0.0.1 (Revit 2023, 2024, 2025, 2026, 2027) and all accompanying documentation.
 
 Copyright (c) 2026 B45 Labs. All rights reserved.
 
