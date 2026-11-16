@@ -6,7 +6,7 @@
 
 > B45 Labs | Connect puts an AI assistant inside Autodesk Revit and opens your open model to the AI tools you already use: Claude Desktop, Claude Code, Codex, Cursor, VS Code, Windsurf, Gemini CLI and other MCP clients.
 
-> **Part of the B45 Labs suite.** Connect is an add-on to **B45 Labs | Coordination 2.2 or newer**. Coordination brings the tools; Connect brings the chat, the voice and the bridge. The Connect button lives on the Coordination tab in Revit.
+> **Part of the B45 Labs suite.** Connect is an add-on to **B45 Labs | Coordination 3.0 or newer**. Coordination brings the tools; Connect brings the chat, the voice and the bridge. The Connect button lives on the Coordination tab in Revit.
 
 ---
 
@@ -30,7 +30,7 @@ BIM coordinators, modelers and managers who work in Revit and want to ask about 
 - **Launch commands and get help from the chat.** Ask for a B45 Labs command by name and the Assistant opens its window as a ribbon click would. Ask how a command works and it explains it from an offline copy of the documentation.
 - **Voice dictation.** Dictate in Portuguese and English through your OpenAI key. Without an OpenAI key, Windows speech recognition takes over (not available in Portuguese).
 - **An MCP server for your AI clients.** "Enable in Claude Desktop" registers Connect in one click; the pane gives each other client what it needs (a command, a config or a deeplink). Nothing goes through B45 Labs servers.
-- **Non-destructive from the outside.** External AI clients get 54 tools: 43 that read and check the model and 11 that only change what you are looking at. Every change to the model itself stays inside Revit behind the confirmation card.
+- **Non-destructive from the outside.** External AI clients get 58 tools: 47 that read, check and audit the model and 11 that only change what you are looking at. Every change to the model itself stays inside Revit behind the confirmation card.
 - **ChatGPT for advanced users.** ChatGPT can reach the same local tools through OpenAI's Secure MCP Tunnel. The plan rules are OpenAI's.
 
 ---
@@ -39,7 +39,7 @@ BIM coordinators, modelers and managers who work in Revit and want to ask about 
 
 | Requirement | Details |
 |---|---|
-| B45 Labs \| Coordination | 2.2 or newer (B45 Labs \| Library is optional; when installed, its tools are available to the Assistant too) |
+| B45 Labs \| Coordination | 3.0 or newer (B45 Labs \| Library is optional; when installed, its tools are available to the Assistant too) |
 | Autodesk Revit | 2023, 2024, 2025, 2026, 2027 *(full support)* |
 | Operating System | Windows 10 / Windows 11 |
 | Installation | Per-user, no administrator rights required |
@@ -50,10 +50,10 @@ BIM coordinators, modelers and managers who work in Revit and want to ask about 
 
 ## Installation
 
-1. Install **B45 Labs | Coordination 2.2 or newer** first ([b45labs.com/download](https://b45labs.com/download)).
+1. Install **B45 Labs | Coordination 3.0 or newer** first ([b45labs.com/download](https://b45labs.com/download)).
 2. Download the Connect installer from [**Releases**](https://github.com/B45Labs/B45Labs_Connect/releases) once the first release is published.
 3. Close Revit before installing.
-4. Run the installer, accept the license, and select the Revit versions to install for. It stops with a clear message if Coordination 2.2 or newer is missing.
+4. Run the installer, accept the license, and select the Revit versions to install for. It stops with a clear message if Coordination 3.0 or newer is missing.
 5. Launch Revit: the **Connect** button appears on the **B45 Labs | Coordination** tab and opens the Connect pane.
 6. In the pane's Setup tab, paste your API key and click **Test key**, or pick your AI client and follow the buttons.
 
@@ -67,7 +67,7 @@ New versions are published on the GitHub **Releases** page. Install the newer ve
 
 ## Data and privacy
 
-B45 Labs does not collect your conversations, your prompts, your voice, your model data or any file name or path. Connect sends B45 Labs only short anonymous reports: failure reports (the exception type and code, never a message), usage counts, and one installation record with a coarse region (continent, country and region, never a city or an IP). They follow the **Share anonymous usage data** switch in B45 Labs | Coordination: turn it off and Connect stops sending.
+B45 Labs does not collect your conversations, your prompts, your voice, your model data or any file name or path. Connect sends B45 Labs only short reports tied to a random install ID: failure reports (the exception type and code, never a message), usage counts, and one installation record with a coarse region (continent, country and region, never a city or an IP). They follow the **Share usage data** switch in B45 Labs | Coordination: turn it off and Connect stops sending.
 
 When you use the Assistant or voice dictation, your prompts and the model data the tools read go straight from your computer to the provider you chose (Anthropic or OpenAI) under your own key, and are processed under that provider's policies. External MCP clients forward tool results to their own provider under your account with that client. Nothing on these paths goes through a B45 Labs server. See [PRIVACY.md](PRIVACY.md) for every item.
 

@@ -1,8 +1,8 @@
-# B45 Labs – Terms of Use / End User License Agreement (EULA)
+# B45 Labs: Terms of Use / End User License Agreement (EULA)
 
 **Effective date:** 2026-01-01  
 **Last updated:** 2026-11-13 (section 5 corrected to list the failure reports, the installation record and the coarse region that the Software sends). Earlier, 2026-10-04 (WP-C74 refresh: sections 1, 5 and 6: the Coordination requirement, the no-telemetry statement for this build, two AI providers chosen by you, dictation audio, third-party AI clients and the optional ChatGPT tunnel; section numbering unchanged, including the 8.1 clause that other documents cite)  
-**Applies to:** B45 Labs | Connect 1.0.0 (Revit 2023, 2024, 2025, 2026, 2027), an add-on that requires B45 Labs | Coordination 2.2 or newer
+**Applies to:** B45 Labs | Connect 0.0.1 (Revit 2023, 2024, 2025, 2026, 2027), an add-on that requires B45 Labs | Coordination 3.0 or newer
 
 This Terms of Use / End User License Agreement (“Agreement”) is a legal agreement between you (“you”, “your”) and B45 Labs (“B45 Labs”, “we”, “our”, “us”) governing your use of the B45 Labs Connect Revit add-in and its companion MCP server (the “Software”).
 
@@ -11,7 +11,7 @@ By installing, copying, or using the Software, you agree to be bound by this Agr
 ## 1. License Grant
 Subject to this Agreement, B45 Labs grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Software for your internal business or personal purposes.
 
-The Software is an add-on to **B45 Labs | Coordination** (version 2.2 or newer), which is licensed under its own agreement and is required for the Software to function. This Agreement covers the Software only.
+The Software is an add-on to **B45 Labs | Coordination** (version 3.0 or newer), which is licensed under its own agreement and is required for the Software to function. This Agreement covers the Software only.
 
 ## 2. Restrictions and Intellectual Property Protection
 
@@ -48,7 +48,7 @@ Some updates may be required for security, compatibility, or stability reasons. 
 Any donation/support links (if present) are optional. Transactions are handled by third-party providers and are subject to their terms.
 
 ## 5. Telemetry, Diagnostics, and Privacy
-**This build of the Software sends short anonymous reports to B45 Labs**: failure reports (the exception type and code, never a message), usage counts (that a feature was used), one installation record and the coarse region inside it (continent, country and region). It never sends the content of your prompts, the AI's answers, your conversations or your model, and it stops when you turn off **Share anonymous usage data** in B45 Labs | Coordination. Diagnostic information on your computer (a rolling log of tool names, outcomes and timings, and a sanitised error log) is written only to files on your computer and is never transmitted.
+**This build of the Software sends short reports to B45 Labs, tied to a random install ID**: failure reports (the exception type and code, never a message), usage counts (that a feature was used), one installation record and the coarse region inside it (continent, country and state or province, looked up from your IP address, which B45 Labs does not keep in its data). It never sends the content of your prompts, the AI's answers, your conversations or your model, and it stops when you turn off **Share usage data** in B45 Labs | Coordination. Diagnostic information on your computer (a rolling log of tool names, outcomes and timings, and a sanitised error log) is written only to files on your computer and is never transmitted.
 
 The **Privacy Policy** (“Privacy Policy”) describes exactly what is collected and how to turn it off, and a future version that collects more will say so in its release notes before that collection starts. By using the Software, you acknowledge that you have reviewed the Privacy Policy and agree to the handling of information described there.
 

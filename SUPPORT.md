@@ -1,14 +1,14 @@
-# B45 Labs – Support
+# B45 Labs: Support
 
-**Last updated:** 2026-11-14  
-**Applies to:** B45 Labs | Connect 1.0.0 (Revit 2023, 2024, 2025, 2026, 2027), an add-on that requires B45 Labs | Coordination 2.2 or newer
+**Last updated:** 2026-10-04 (WP-C74 refresh: two AI providers, the MCP client family, the self-test and the log file)  
+**Applies to:** B45 Labs | Connect 0.0.1 (Revit 2023, 2024, 2025, 2026, 2027), an add-on that requires B45 Labs | Coordination 3.0 or newer
 
 ## 1. Support channels
 - Email: **support@B45Labs.com**
 - Documentation: the Connect guides on b45labs.com (Docs > B45 Connect), including a troubleshooting page for the bracketed error codes (`[RevitNotAvailable]`, `[BridgeBusy]`, `[ContractMismatch]`).
 
 ## 2. Before you write: three quick checks
-1. **B45 Labs | Coordination 2.2 or newer is installed.** The Connect button lives on the Coordination tab; without Coordination there is no button and no tools.
+1. **B45 Labs | Coordination 3.0 or newer is installed.** The Connect button lives on the Coordination tab; without Coordination there is no button and no tools.
 2. **Only one external MCP client is connected.** Claude Desktop keeps the Connect server alive in the background after its window is closed (quit it from the system tray); each open Claude Code session keeps one alive too. A second client is told `[BridgeBusy]`.
 3. **The client points at the installed executable**, `%AppData%\Autodesk\Revit\Addins\<RevitVersion>\B45Labs\Connect\mcp\B45Labs.Connect.exe`, the path shown in the Connect pane under **Server (.exe) path**.
 

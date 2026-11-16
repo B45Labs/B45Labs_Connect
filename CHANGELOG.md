@@ -34,7 +34,7 @@ This project adheres to [Semantic Versioning](https://semver.org/) and follows t
   click and Claude Desktop can read your open model after a restart; "Copy Claude Code command"
   gives you the single line to paste; other local MCP clients can point at the same executable
   with a hand-written configuration entry.
-- Reading from outside, with limits. External clients get 54 tools: 43 that read and check the
+- Reading from outside, with limits. External clients get 58 tools: 47 that read, check and audit the
   model and 11 that only change what you are looking at (open or isolate a view, select
   elements, section box, reference points, colored walls, refresh the Library pane, open a B45
   Labs command or a Revit dialog and close it again). Every change to the model itself stays
@@ -43,13 +43,13 @@ This project adheres to [Semantic Versioning](https://semver.org/) and follows t
 
 ### Notes
 
-- An add-on for B45 Labs | Coordination 2.2 or newer: the Connect button lives on the
+- An add-on for B45 Labs | Coordination 3.0 or newer: the Connect button lives on the
   Coordination tab, and the tools the Assistant and the MCP server run are Coordination's (and
   Library's, when Library is installed). Full support: Revit 2023, 2024, 2025, 2026 and 2027,
   on Windows 10 and 11.
 - Known limits: one Revit instance at a time, the active document only, and one external MCP
   client at a time.
-- Connect sends short anonymous reports (failure reports, usage counts and one installation
-  record) to B45 Labs, and they stop when you turn off Share anonymous usage data in
+- Connect sends short reports tied to a random install ID (failure reports, usage counts and one installation
+  record) to B45 Labs, and they stop when you turn off Share usage data in
   Coordination. It never sends your prompts, the AI's answers or anything from your model. See
   [PRIVACY.md](PRIVACY.md).

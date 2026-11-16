@@ -1,156 +1,184 @@
-# B45 Labs – Privacy Policy
+# B45 Labs: Privacy Policy
+
 
 **Effective date:** 2026-01-01  
-**Last updated:** 2026-11-13 (corrected to match what the Software does: it also sends short failure reports, and this text no longer says that nothing is transmitted, that error data is not collected or that no region is sent: sections 1, 2, 3, 4, 5, 6, 8 and 9 and the local files; the local chat history is now listed). Earlier, 2026-11-01 (the Software also sends one installation record with a coarse location: sections 1, 2.3, 2.5 and local files). Earlier, 2026-10-31 (the Software now sends anonymous usage counts to B45 Labs: sections 1, 2, 4, 5, 6, 8 and 9). Earlier, 2026-10-25 (spec crosscheck: the tools now also read parameter values and schedule rows, section 3 and 12; the tool count is stated again). Earlier, 2026-10-04 (WP-C74 refresh: two AI providers, dictation audio, the embedded documentation index, the local named pipe, the optional ChatGPT tunnel, the local log files, and the statement that the 2026-10-04 build collected no usage telemetry)  
-**Applies to:** B45 Labs | Connect 1.0.0 (Revit 2023, 2024, 2025, 2026, 2027), an add-on that requires B45 Labs | Coordination 2.2 or newer
+**Last updated:** 2026-11-15  
+**Applies to:** B45 Labs | Coordination 3.0.0, B45 Labs | Library 2.0.0, B45 Labs | Connect 0.0.1, B45 Labs | Wayfinder 0.0.1 (together, the "Software") and the website b45labs.com (the "Website").
 
-This Privacy Policy explains how B45 Labs (“B45 Labs”, “we”, “our”, “us”) handles information when you use the B45 Labs | Connect Revit add-in and its companion MCP server (the “Software”).
+## 1. Who we are and how to reach us
 
-## 1. Scope
-This Policy applies to information handled by the Software: what stays on your computer, what the Software sends to third parties on your instruction, and what, if anything, reaches B45 Labs.
+B45 Labs ("B45 Labs", "we", "our", "us") makes tools for Autodesk Revit and Autodesk Navisworks.
+For privacy questions or requests, write to **support@b45labs.com**.
 
-**In short.** We do not collect your conversations, your prompts, your voice, your model data or any file name or path. We collect errors, to fix and improve the product, and, under the same switch, anonymous usage counts, one installation record per installation and a coarse region (continent, country and region, never a city). None of these reports carries a person's name, an e-mail address, a file name or a folder path.
+## 2. In short
 
-**In this build, the Software sends four kinds of small, anonymous reports to B45 Labs:** failure reports (that something in Connect failed, with the exception type and code, never a message), usage counts (that a feature was used: for example the pane was opened, a chat message was sent, a tool ran), one installation record (section 2.3) and the coarse region inside it (section 2.5). It never sends what you typed, what the AI answered, or what is in your model. All four follow the same opt-out as B45 Labs | Coordination: the **Share anonymous usage data** switch in Coordination turns them off. It has no profile window. Section 2 states what is collected, category by category.
+- Usage reporting is **on by default** and one switch turns it off. It sends counts tied to a random install ID, error reports, one installation record and a coarse location (continent, country and state or province, never a city).
+- We never collect your model, its geometry, file names or paths, or your Windows user name.
+- Your profile (name, e-mail, company, role) leaves your computer **only if you turn on "Also sync my profile"**. It is off by default.
+- Update checks and notices are **not** behind the usage switch. A version can be locked remotely until you update.
+- Connect sends your prompts and the model data its tools read to the AI provider **you** choose. We do not receive them.
+- We keep data for **up to 36 months** and delete it earlier when you ask.
+- We may publish **aggregated, de-identified statistics**, including on our website and in research. Nothing in them identifies you or your organization.
 
-**Important: AI providers are separate.** B45 Labs | Connect lets you use an in-Revit AI Assistant and a local MCP Bridge that work with **third-party AI providers and AI clients**. The Assistant uses the provider **you** choose, **Anthropic** or **OpenAI**, through **your own** API key. External MCP clients (such as Claude Desktop) use their own account with their own provider. When you use those features, your prompts and the model data the tools read are sent to that provider or client and are processed under **their** privacy policies and terms, not this one. Section 12 describes each path in detail.
+## 3. What the Software collects
 
-**Coordination is separate too.** The Software requires B45 Labs | Coordination, which has its own Privacy Policy covering its own telemetry and settings. Nothing in this Policy changes what Coordination does, and nothing Coordination collects is attributed to Connect.
+Collection works in **two tiers**:
 
-## 2. What We Collect
+- **Essential data** (3.1 to 3.5) is collected by default to operate, support and improve the Software, on the basis of our legitimate interest in running and improving a product. The switch **"Share usage data"**, in My Profile, controls it for all four products: Connect has no switch of its own and reads the one in Coordination; Wayfinder has its own My Profile and shares the same setting with the other products on the computer.
+- **Optional data** (3.6 and 3.7) is sent only if you opt in or do something yourself.
 
-**Status of this build (2026-11-13): the Software collects the usage counts described in 2.1, the failure reports in 2.2, the installation record in 2.3 with the identifiers of 2.4 and the coarse region of 2.5, and nothing in the other categories.** It is on by default and stops when you turn off **Share anonymous usage data** in B45 Labs | Coordination (section 8). Sections 2.1 to 2.6 define the ceiling: a future release that collects more will say so in its release notes, and this section will gain a dated paragraph saying exactly what was added and how to turn it off. The Software will never start collecting silently.
+### 3.1 Usage data
+The name of each command or button you use, how many times, whether it worked, and when. The Software version and build, the Revit or Navisworks name, version and build, and the interface language. Connect also counts what was used (pane opened, a message sent, a tool run, which kind of external AI client connected), never the content.
 
-### 2.1 Usage Data
-*Collected in this build, as counts.* Each count is the name of something that happened, with how many times and whether it succeeded:
-- the add-in started in a Revit session;
-- the Connect pane was opened (at most once per half hour);
-- a chat message was sent, with the AI provider used (Anthropic or OpenAI), never the message;
-- a prompt was picked from the prompt library: a prompt that ships with the Software is counted by its fixed name; a prompt you wrote is counted only as “custom”, with no text and no name;
-- a tool ran, with the tool's name (only names from the Software's own fixed list), whether it was started from the in-Revit chat or by an external AI client, and whether it succeeded;
-- which kind of external AI client connected (Claude Desktop, Claude Code, Codex, Cursor, VS Code, Windsurf, Gemini CLI, or Other), once per Revit session.
+### 3.2 Error and diagnostic data
+When a B45 Labs command fails, an error report is sent with the command that was active.
+- **Coordination and Library:** the report carries Revit's error message and stack trace. File paths, Revit file names and e-mail addresses are removed before it leaves your computer. Revit can name an element, view or family in that message, and we cannot remove those names automatically.
+- **Connect:** the report carries only the exception type and its code, never a message.
+- **Wayfinder:** for an error it handled, only the exception type and its code; for a crash, a short message and a stack trace with file paths, model file names and e-mail addresses removed.
+Errors of other add-ins are not reported.
 
-Counts are grouped per session before they are sent, together with the add-in version, the Revit version and build, and the Revit interface language. **Never** the content of a prompt, an answer, a tool argument or a tool result, never a model, project or file name, and never an API key.
+### 3.3 Installation and update data
+When the Software first runs and when its version or language changes: the version first installed, the running version, the version it was upgraded from, and the dates it was first seen and last updated.
 
-### 2.2 Error and Diagnostic Data
-*Collected, as short failure reports.* When Connect catches a failure in its own code and keeps running, or an unhandled exception passes through at least one frame of Connect's own code, it queues one short report. Failures of other add-ins are not reported, and repeats of the same failure are throttled. A report carries the installation identifier of 2.4, the Revit name, version and build, the Connect version, a timestamp, a command name made of two cleaned code identifiers (for example `ConnectHandled.ConnectProcess.UnhandledException`), a fixed sentence holding the exception type and its code, and a fixed text in place of a stack trace. It carries **no message text**, no prompt, no answer, no model, project or file name, no path and no e-mail address: the Software reads only the exception type and code. Reports wait in `%LocalAppData%\B45Labs\Connect\failure_queue.jsonl` until they are sent and are dropped after 3 days. Nothing is written when you have turned **Share anonymous usage data** off in Coordination. The **local** error log (section 2, “What the Software stores on your computer”) is separate: it keeps a sanitised message for support on your computer and is never transmitted.
+### 3.4 Identifiers
+A random installation identifier (`install_id`) shared by the B45 Labs products on the same computer, and a random session identifier created each time the host program starts. They contain no name or e-mail. They are used to group usage and error records and, only if you sync your profile or send feedback, to link that profile or message to your installation.
 
-### 2.3 Installation and Update Data
-*Collected, as one record per installation and Revit version.* The first time Connect runs, and again only when the Connect version or the Revit interface language changes, it sends: the Connect version first installed and the one running now, the version it was upgraded from, the dates it was first seen and last updated, the Revit name, version and build, and the Revit interface language, together with the installation identifier of 2.4. It also carries your **coarse location** (continent, country and region, never a city), described in 2.5. Connect keeps what it last sent in `%LocalAppData%\B45Labs\Connect\installation_sent.json` so that it does not send the same record again. It follows the same opt-out as the usage counts.
+### 3.5 Location
+Continent, country and state or province, taken from your IP address when the installation record is sent. We never collect a city, a street address or GPS coordinates. The lookup is made from your computer to **ipwhois.app**, a public IP-lookup service, which sees your IP address as any website you visit does. B45 Labs keeps only the three fields it returns and does not read or save your IP address in its data. Our hosting provider receives your IP address with each request and may keep technical logs (see section 9). Turning off the usage switch stops the lookup.
 
-### 2.4 Pseudonymous Identifiers
-*Collected.* Each count and each failure report carries the random installation identifier that B45 Labs | Coordination already created on this computer, and a random session identifier created each time Revit starts. Neither contains a name, an e-mail address or any other personally identifiable information. Connect creates no identifier of its own. It does not read the identifier until the file exists, so nothing is sent before Coordination has run once.
+### 3.6 Your profile (only if you opt in)
+My Profile (Coordination, Library and Wayfinder) holds your full name, preferred name, e-mail, company or studio, role, Revit experience and how you found us. It is stored encrypted on your computer and is shared by the B45 Labs products on that computer. It is sent to B45 Labs **only if you turn on "Also sync my profile"** (off by default; it also needs the usage switch to be on), and again each time you save it. Connect has no profile.
 
-### 2.5 Region Data
-*Collected, only inside the installation record of 2.3.* When that record is about to be sent, Connect asks a public IP-lookup service (**ipwhois.app**, the same one B45 Labs | Coordination and B45 Labs | Library use) where your internet connection is, and keeps only the **continent, country and region** it answers. The request goes from your computer to that service, which sees your IP address as any website you visit does. **B45 Labs never receives, stores or sends your IP address and never reads or stores a city.** The lookup follows the same opt-out as the usage counts: when you turn it off, it is not made. If the lookup fails, the record carries "Unknown" for these three fields and Connect tries once more later in the session.
+### 3.7 Feedback you send
+**Send Feedback** (Coordination and Library, in the Help panel and in About Me) sends the message you write, the product, plug-in and Revit versions, your language and the installation identifier, plus the name, company and e-mail if you fill them in. It works even when the usage switch is off, because sending it is your own action. The optional "Include diagnostics" box is off by default; when ticked it adds your operating system, culture and the last error the plug-in logged (file paths, Revit file names and e-mail addresses removed). In Wayfinder, Send Feedback opens your e-mail app instead.
 
-### 2.6 User Profile Data (Voluntary)
-*Not collected in this build.* The Software has no user-profile window and syncs no profile.
+### 3.8 What the usage switch does
+- **Coordination and Library:** when it is off, nothing is uploaded and no location lookup is made. Records already kept on your computer stay there and are sent if you turn the switch on again. **Erase my data** removes them.
+- **Connect and Wayfinder:** when it is off, they stop recording and empty their waiting queues, and any report older than 3 days is dropped.
 
-**What the Software stores on your computer (the usage queue and the failure queue are sent as described in 2.1 and 2.2; everything else below is never transmitted to B45 Labs):**
+## 4. Updates, notices and the remote lock
 
-- **Your AI provider API keys**, one encrypted file per provider under `%LocalAppData%\B45Labs\Connect\`, protected with Windows DPAPI for your Windows user account (section 11).
+At start-up each product asks our server whether a newer version exists and whether there is an announcement. Coordination also checks for notices about once a minute while Revit is open. These requests carry no identifier, but our server and GitHub see your IP address as any website does, and **they are not stopped by the usage switch**.
+
+If you click **Update now**, the installer is downloaded from github.com, checked (SHA-256 and signature) and started; if anything is unexpected, the download page opens instead. Updating needs no administrator rights.
+
+B45 Labs can mark a version as no longer allowed. Such a version shows a notice and, for a version withdrawn for safety, **locks its commands until you update**.
+
+## 5. Connect and third-party AI providers
+
+Connect lets you use an in-Revit Assistant and an MCP server with **AI providers and AI clients that you choose**. These are independent controllers under their own terms and privacy policies.
+
+- **The Assistant** uses **Anthropic** or **OpenAI** with **your own API key**. When you send a message, your prompt, the conversation so far and the results of the tools it runs (element counts, ids, findings, and the names and parameter values you ask about) go to that provider directly from your computer. They do not pass through B45 Labs.
+- **Voice dictation** uploads the recorded audio to OpenAI with your key, only while you dictate. Without an OpenAI key, Windows speech recognition is used and no audio leaves your computer.
+- **External MCP clients** (Claude Desktop, Claude Code, Codex, Cursor, VS Code, Windsurf, Gemini CLI and others) receive tool results on your computer over a local named pipe and pass them to their own provider under your account. These clients receive reading, checking, audit and view-only tools. None creates, edits or deletes model elements by default; changes stay inside Revit behind a confirmation card.
+- **Your keys** are stored encrypted on your computer with Windows DPAPI for your Windows user. We never receive them.
+- **Your chats** are kept as files on your computer in `%LocalAppData%\B45Labs\Connect\history`, not password protected, and never sent to B45 Labs. Delete the folder at any time.
+
+If you do not set a key, do not use the Assistant or dictation and do not connect an external client, no prompt, model data or audio leaves your computer through Connect.
+
+## 6. What we do not collect
+
+- Your project contents, drawings, geometry or BIM data.
+- Model or family file names, file paths or folder locations. The only exception is the content of an error message, which can name an element, view or family (section 3.2).
+- Payment information.
+- Precise location, a city, passwords or credentials.
+- Your Revit, Navisworks or Windows user name, or your computer name.
+- Hardware details or operating-system details, except the optional diagnostics in 3.7.
+
+If such information appears in a screenshot or log you send us for support, please remove it first.
+
+## 7. The Website (b45labs.com)
+
+- **Forms** (newsletter, demo, services, live invitation, roadmap request, testimonial): we store what you type (name, e-mail, company, message, location) with the language of the page and your country. Your country is looked up from your IP address by **get.geojs.io** when you send a form. If the form cannot be sent, a message may open in your e-mail app with what you typed.
+- **Visits** are counted with Plausible Analytics, without cookies.
+- **Fonts and videos** load from Google Fonts and YouTube, which see your IP address. Some pages load a library from jsDelivr.
+- **Your browser** stores your theme, the notices you closed and a random identifier used to count roadmap votes.
+- Forms are stored in our Bubble backend. To see or delete what you sent, write to support@b45labs.com.
+
+## 8. How we use information
+
+- Measuring feature adoption to prioritize development, and planning the roadmap.
+- Improving stability, performance and reliability across Revit and Navisworks versions.
+- Finding and fixing errors, and supporting you.
+- Checking that installers and updates reach people safely.
+- Answering the messages and requests you send.
+- Producing **aggregated, de-identified statistics**, including for the publication and research uses in section 8.1.
+
+### 8.1 Aggregated statistics, publication and research
+B45 Labs may combine data from many installations into aggregated, de-identified statistics, such as the number of installations and sessions, the continents, countries and states or provinces where the Software is used, the most-used commands, version adoption and usage trends over time ("Aggregated Statistics").
+
+B45 Labs may publish and disclose Aggregated Statistics, including on its website, in product, business and professional materials, and in academic and scientific research such as articles, theses and conference presentations, and the datasets that support them.
+
+Aggregated Statistics:
+- never include your profile data, even if you synced it;
+- never include the text of error messages or stack traces, only counts and rates of errors;
+- never identify you, your employer, your clients or your projects;
+- are published only in a form in which no individual or organization can reasonably be identified.
+
+We do not try to re-identify anyone from Aggregated Statistics. Turning off "Share usage data" keeps your installation out of the statistics produced after that point. Statistics already published cannot be withdrawn, because they contain nothing that can be traced back to you.
+
+
+## 9. Sharing and service providers
+
+We do not sell your data and we do not share it with third parties for advertising or marketing. We use these providers to run the Software and the Website:
+
+| Provider | What it does | What it sees |
+|---|---|---|
+| Bubble (United States) | Our backend: usage and error records, installation records, optional profiles, feedback, forms, newsletter | The data described in this policy, and your IP address with each request |
+| ipwhois.app | Region lookup from the Software | Your IP address |
+| get.geojs.io | Country lookup for Website forms | Your IP address |
+| GitHub | Hosts installers and updates | Your IP address when you download |
+| Plausible Analytics | Website visit counts | Page visits, without cookies |
+| Google Fonts, YouTube, jsDelivr | Fonts, videos and a map library on the Website | Your IP address |
+| Anthropic, OpenAI | Only if you use Connect's Assistant, dictation or tunnel, with your own account | What you send them (section 5) |
+
+ipwhois.app and get.geojs.io are public services that we call without an account or key; they see your IP address as any website you visit does. We may disclose information if required by law or to protect our rights and the security of the Software.
+
+## 10. How long we keep data
+
+We keep usage, error, installation, profile, feedback and form data for **up to 36 months** and then delete it. We delete it earlier when you ask (section 12). Aggregated Statistics contain no personal data and may be kept indefinitely.
+
+On your computer, files stay until you remove them: Erase my data removes the B45 Labs data; the Connect files (keys, chats, logs) can be deleted by hand; uninstalling the Software leaves your settings and profile so a reinstall finds them.
+
+## 11. Security
+
+Data is sent over encrypted (HTTPS/TLS) connections, your profile and API keys are encrypted at rest on your computer, and error data is sanitized as described in 3.2. Collected data is stored on access-controlled infrastructure available only to authorized people. No method of transmission or storage is completely secure.
+
+## 12. Your choices and requests
+
+From **My Profile**:
+- **Share usage data**: master switch for usage reporting (section 3.8).
+- **Also sync my profile**: off by default.
+- **Export my data**: a JSON file with what is stored locally about you.
+- **Erase my data**: permanently deletes all B45 Labs data stored on your computer (profile, usage history and machine identity) and asks our server to delete the records linked to your installation identifier. This cannot be undone. Because the profile, identifier and privacy choice are shared, this covers the other B45 Labs products on the same computer.
+
+Newsletter sign-ups, forms you sent from the website and feedback you sent are deleted on request: write to **support@b45labs.com**. You may also ask what we hold about you, or ask us to correct it. We may ask for information to verify your request.
+
+## 13. International transfers
+
+The Software and the Website are used in many countries. Our backend is in the United States, and the other providers in section 9 operate where they are.
+
+## 14. Changes to this policy
+
+We may update this policy. The "Last updated" date shows the latest revision. Material changes, including any new kind of data collection, will be announced in release notes or in the Software before the collection starts.
+
+## 15. Contact
+
+B45 Labs Support, **support@b45labs.com**.
+
+## Annex: Files that Connect stores on your computer
+
+The usage queue and the failure queue are sent as described in sections 3.1 and 3.2. Everything else below is never transmitted to B45 Labs:
+
+- **Your AI provider API keys**, one encrypted file per provider under `%LocalAppData%\B45Labs\Connect\`, protected with Windows DPAPI for your Windows user account (section 5).
 - **Your microphone preference** for voice dictation, remembered on this PC.
 - **The MCP server log**, `%AppData%\B45Labs\Connect\mcp_server.log` (rotated once to `mcp_server.1.log` at 1 MB). Each line carries a timestamp, the tool name, the outcome and the elapsed time; **never** the arguments sent or the results returned, so no model data lands in it.
 - **The add-in error log**, `%AppData%\B45Labs\Connect\connect_errorlog.jsonl`, sanitised (file paths, model names and e-mail addresses are redacted when written).
 - **The installation memory**, `%LocalAppData%\B45Labs\Connect\installation_sent.json`: what Connect last sent in its installation record (versions, dates, language, the installation identifier). It holds no content and is never sent as a file.
 - **The usage queue**, `%LocalAppData%\B45Labs\Connect\usage_queue.jsonl`: the counts waiting to be sent (one short line per event, no content). It is emptied after each successful send, capped at 256 KB, and nothing is written to it while the usage switch is off.
-- **The failure queue**, `%LocalAppData%\B45Labs\Connect\failure_queue.jsonl`: the short failure reports of 2.2 waiting to be sent (no message text and no content). Reports older than 3 days are dropped, and nothing is written to it while the usage switch is off.
+- **The failure queue**, `%LocalAppData%\B45Labs\Connect\failure_queue.jsonl`: the short failure reports of section 3.2 waiting to be sent (no message text and no content). Reports older than 3 days are dropped, and nothing is written to it while the usage switch is off.
 - **Your chat history**, `%LocalAppData%\B45Labs\Connect\history\`: your conversations with the Assistant (what you saw in the chat: your messages, the answers and the tool and error lines), kept on this PC so that "New chat" does not throw the previous one away. A chat can include names and numbers from your models, and the files are not protected with a password. They are never sent to B45 Labs; delete the folder, or the chats you do not want, at any time.
 - **An entry in Claude Desktop's configuration file** (`%AppData%\Claude\claude_desktop_config.json`) only when you click “Enable in Claude Desktop”; “Disable” removes it. The Software edits no other third-party configuration file.
 - **The embedded documentation index**: an offline copy of the B45 Labs command documentation shipped inside the add-in, which the Assistant reads locally to explain a command. It makes no network request.
 
 You can delete the log files at any time; they are recreated on the next run. Uninstalling removes the add-in and the MCP server; the key files and logs listed above may remain under your user folders and can be deleted by hand.
-
-## 3. What We Do NOT Collect
-We do not intentionally collect any “sensitive personal data” (special categories), such as health data, biometric identifiers, precise location data, government IDs, financial account data, or authentication credentials.
-
-B45 Labs does not collect your conversations or your model data. The only things this build sends to B45 Labs are the reports of section 2 (failure reports, usage counts, the installation record and its coarse region). In particular, B45 Labs never receives:
-- Project file contents, drawings, geometry, or BIM data.
-- Revit model or family file names, file paths, or folder locations.
-- The content of your Assistant prompts, conversations, or voice dictation (see section 12: that content goes to the AI provider you configured, not to B45 Labs).
-- The tool results the Assistant or an MCP client reads from your model (counts, ids, findings, names, parameter values, schedule cell text, and the differences found when a specification table you provide is compared with the model). They go to the provider or client you chose, never to B45 Labs.
-- Your AI provider API keys (see section 11).
-- Payment information. Donations/support (if offered) are processed by third-party providers; B45 Labs does not receive or store payment details.
-- Precise geolocation (street address / GPS coordinates), a city, or your IP address. The only location we receive is the coarse region of section 2.5: continent, country and region.
-- Passwords, authentication credentials, or personal communications.
-- Your Revit or Windows username.
-- Device or hardware specifications (processor, memory, screen resolution) or operating-system details.
-
-If such information appears in a user-provided support screenshot or log, please redact it before sharing.
-
-## 4. How We Use Information
-
-B45 Labs uses the failure reports, usage counts and installation records described in section 2 strictly for internal purposes:
-- Measuring feature adoption and tool usage to prioritize development and improvements.
-- Improving stability, performance, and reliability across different Revit versions and environments.
-- Debugging and fixing errors and regressions.
-- Validating installer/update distribution health (e.g., adoption by version, compatibility signals).
-- Producing aggregated, anonymized metrics for roadmap planning.
-
-## 5. Sharing and Disclosure
-We do not sell your data and we do not share collected data with third parties for advertising or marketing.
-
-The failure reports, usage counts and installation records are stored with the same hosting and database service that stores B45 Labs | Coordination's telemetry, used only to support our internal operations and not authorized to use the information for its own purposes.
-
-We may disclose information if required by law, court order, or to protect our rights and the security of the Software.
-
-## 6. Data Retention
-Failure reports, usage counts and installation records are retained for up to **24 months** unless a longer retention is required to investigate recurring issues or to comply with legal obligations.
-
-Local files on your computer are retained until you remove them:
-- API keys: until you click **Clear** for a provider or **Forget all keys on this PC**.
-- `mcp_server.log`: 1 MB, rotated once to `mcp_server.1.log`; two files is the whole retention. Delete them at any time.
-- `connect_errorlog.jsonl`: until you delete it.
-- `usage_queue.jsonl`: until the counts in it have been sent (or you opt out), and never more than 256 KB.
-- `failure_queue.jsonl`: until the reports in it have been sent (or you opt out), and never longer than 3 days per report.
-- `history\` (your chats): until you delete them, with the number of chats kept set in the History window (the older ones are removed first, favorites are kept).
-- `installation_sent.json`: until you delete it. Deleting it only makes Connect send its installation record once more.
-
-
-## 7. Security
-Your API keys are encrypted at rest with Windows DPAPI for your Windows user account, one file per provider with its own entropy, so another Windows account or another machine cannot decrypt them. Requests to AI providers travel over the provider's own encrypted (HTTPS/TLS) connection directly from your machine. The MCP Bridge runs over a **local named pipe** on your computer and serves one external client at a time; it is not exposed on the network. The local log files never contain tool arguments or tool results. We implement reasonable administrative, technical, and organizational safeguards; however, no method of transmission or storage is 100% secure.
-
-## 8. Your Choices and Requests
-Connect has no usage switch of its own: it reads the one in B45 Labs | Coordination. The controls you have are there, in the Connect pane's **Setup** tab, and on your computer:
-- **Share anonymous usage data** (in Coordination): turn it off and Connect stops counting, stops sending failure reports and installation records, and empties its queues. The change reaches Connect within about a minute.
-- **Erase my data** (in Coordination): sends a deletion request to our server for the data tied to your installation identifier and deletes the B45 Labs data that Coordination stores on your PC. The files that Connect keeps (listed above) can also be deleted by hand.
-- **Clear** (per provider) and **Forget all keys on this PC**: delete your saved API keys.
-- **Microphone**: choose the recording device, or leave System default.
-- **Disable** (Claude Desktop): removes the `b45-connect` entry the Software wrote to Claude Desktop's configuration.
-- **Delete the log files** under `%AppData%\B45Labs\Connect\` at any time.
-- **Uninstall**: removes the add-in and the MCP server.
-
-You may also contact us to request information about data associated with your usage, or correction or deletion where applicable. We may ask for additional information to verify your request.
-
-## 9. International Use
-The Software may be used in different countries. B45 Labs processes the failure reports, usage counts and installation records on its backend, as described in B45 Labs | Coordination's policy. The AI providers and AI clients you choose process your prompts and model data where they operate, under their own policies (section 12).
-
-## 10. Changes to This Policy
-We may update this Policy from time to time. The “Last updated” date will reflect the most recent revision. Material changes, including the introduction of any telemetry, will be communicated through release notes and will appear here as a dated paragraph in section 2 before the collection starts.
-
-## 11. AI Provider API Keys
-The in-Revit Assistant and voice dictation require **your own** API key from an AI provider: **Anthropic** (console.anthropic.com) or **OpenAI** (platform.openai.com). These are pay-per-token developer keys; a Claude.ai or ChatGPT subscription is not an API key and does not work here. When you enter a key, it is stored **locally** on your computer, encrypted with Windows DPAPI for your Windows user, one file per provider, for the Software to use when it calls the provider on your behalf. **B45 Labs does not collect, receive, transmit to our servers, or store your API keys**, and never writes them to a log. The **Test key** button sends one request to the provider's models list to validate the key; nothing from your model is sent. **Clear** deletes one provider's key; **Forget all keys on this PC** deletes them all. Keep your keys confidential; you are responsible for their security and for any usage associated with them (see TERMS.md).
-
-## 12. Data Sent to Third-Party AI Providers and AI Clients
-The Software sends data to a third party **only when you actively use** the relevant feature, and only to the party you configured. Specifically:
-
-- **In-Revit Assistant (Anthropic or OpenAI, your choice).** When you send a prompt in the Connect pane, the Software transmits to the provider you selected: your prompt, the conversation so far, and the results of the tools the Assistant runs to answer you. Those results are the **model data the tools read**: element counts, element ids, QA findings, and the names of elements, views, sheets, levels, worksets and links you ask about (and the values of parameters and the schedule rows you ask about, and the specification table you give it to compare against the model). Reading values is the one place where your project's own text, for example a manufacturer or a door mark, travels to the provider: ask only about what you are willing to share with that provider. The Software never sends full file paths, Windows user names or model geometry to the provider. The request goes over the provider's own encrypted connection, directly from your machine.
-- **Voice dictation (OpenAI).** When you click the microphone, the recorded **audio** is uploaded to OpenAI with your OpenAI key to be transcribed into text. Audio is captured only while you are dictating. Without an OpenAI key, Windows' built-in speech recognition is used instead and no audio leaves your computer.
-- **The embedded documentation index is offline.** When the Assistant explains a command, it reads the copy of the documentation shipped inside the add-in; no network request is made for that lookup.
-- **External MCP clients (Claude Desktop, Claude Code, Codex, Cursor, VS Code, Windsurf, Gemini CLI, others).** The companion MCP server hands tool results to the client running on **your** computer, over the local named pipe. The client then sends them to **its own** AI provider under **your account with that client** and that client's terms. On this path the Software itself sends nothing to any AI provider. External clients receive 54 tools: 43 that only read or check the model and 11 that change what you are looking at (opening or isolating a view, a section box, reference points, wall colors saved as view settings, opening a B45 Labs or Revit window). No tool that creates, moves, edits or deletes model elements is available to them.
-- **The optional ChatGPT path (OpenAI Secure MCP Tunnel).** If you choose to follow the advanced ChatGPT setup, you run OpenAI's `tunnel-client` yourself, and the tool traffic described above travels from your computer through **OpenAI's tunnel service** to ChatGPT, inside **your own OpenAI organisation** and under OpenAI's terms. B45 Labs operates no part of that path.
-- **The MCP Bridge itself is local.** The Bridge server runs inside Revit and communicates with the MCP server process on the same computer over a local **named pipe**. It does not, on its own, send your model anywhere. **Nothing on any of these paths passes through a B45 Labs server.**
-
-These AI providers and AI clients are **independent controllers** of the data you send them. Their handling of your prompts, conversations, audio, and model data is governed by **their** privacy policies and terms, which you should review:
-
-- **Anthropic**: https://www.anthropic.com/legal/privacy
-- **OpenAI**: https://openai.com/policies/privacy-policy
-
-If you do **not** configure an API key, do **not** use the Assistant or dictation, and do **not** connect an external MCP client, no prompt, conversation, model data or audio leaves your computer.
-
-## 13. Contact
-For privacy questions or requests, contact:
-
-**B45 Labs Support**  
-Email: support@B45Labs.com
